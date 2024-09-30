@@ -8,6 +8,7 @@ int main() {
     float R ;
     float T;
     float CI;
+    int n;
     printf("Let's calculate your compound interest! \n");
     //variable initializatoin
     //input principle
@@ -19,8 +20,11 @@ int main() {
     //input yaers
     printf("Enter the time in years: ");
     scanf("%f", &T);
+    //input n
+    printf("Enter the number of times interest is compounded per year: ");
+    scanf("%d", "&n");
     //calculate CI
-    CI = P* pow((1+R/100), T);
+     CI= P*pow((1+R/(n*100)),n*T);
     //output CI
     printf("Your compound interest is:%.2f", CI);
    
